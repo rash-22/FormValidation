@@ -6,7 +6,8 @@ body{
 	background-image: url(https://wallpaperaccess.com/full/729354.jpg);
 	font-family: 'Georama', sans-serif;
 	color: #000000;
-	height: 100%; 
+	width: 100vw;
+  	height: 100vh; 
 	background-position: center;
   	background-repeat: no-repeat;
   	background-size: cover;
