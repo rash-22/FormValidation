@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form validation</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Georama:wght@300&display=swap" rel="stylesheet"> 
+</head>
+<body>
+  <br>
+  <h2>User login</h2>
+  <br>
+    <script type="text/javascript">   
+    function validateform(){  
+    var name=document.myform.name.value;  
+    var password=document.myform.password.value;  
+      
+    if (name==null || name==""){  
+      alert("Name can't be blank");  
+      return false;  
+    }else if(password.length<6){  
+      alert("Password must be at least 6 characters long.");  
+      return false;  
+      }  
+    }  
+    </script>  
+    <body>  
+    <form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()" >  
+    Name : <br><br><input type="text" name="name"><br><br>  
+    Password : <br><br><input type="password" name="password"><br><br>  
+    </form>  
+    <br><br>
+    <hr size="2">
+    <br><br>
+    <h2>User personal information</h2>
+    <br>
+    <script>  
+    function validateemail()  
+    {  
+    var x=document.myform.email.value;  
+    var atposition=x.indexOf("@");  
+    var dotposition=x.lastIndexOf(".");  
+    if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+      alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+      return false;  
+      }  
+    } 
+    function validate(){  
+  var num=document.myform.num.value;  
+  if (isNaN(num)){  
+  document.getElementById("numloc").innerHTML="Enter Numeric value only";  
+  return false;  
+  }else{  
+  return true;  
+  }  
+  }   
+    </script>  
+    <body>  
+    <form name="myform"  method="post" action="#" onsubmit="return validateemail();"> 
+    <form name="myform" onsubmit="return validate()" >   
+    Number : <br><br><input type="text" name="num"><span id="numloc"></span><br><br>  
+    Email : <br><br><input type="text" name="email"><br><br>
+    </form>  
+</body>
+</html>
